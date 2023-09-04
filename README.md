@@ -66,6 +66,10 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 vbase-3-ts-setup
 
+## 免费的视频库
+
+https://pixabay.com/videos/
+
 ## 开始
 
 安装 create-vite: https://cn.vitejs.dev/guide/
@@ -104,12 +108,12 @@ export default defineNuxtConfig({
   postcss: {
     plugins: {
       tailwindcss: {},
-      autoprefixer: {},
-    },
+      autoprefixer: {}
+    }
   },
   // Add your newly-created ./assets/css/main.css to the css array in your nuxt.config.js file.
-  css: ["~/assets/css/main.css"],
-});
+  css: ['~/assets/css/main.css']
+})
 ```
 
 修改配置 tailwind.config.js
@@ -117,19 +121,12 @@ export default defineNuxtConfig({
 ```ts
 // tailwind.config.js
 export default defineNuxtConfig({
-  content: [
-    "./components/**/*.{js,vue,ts}",
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    "./nuxt.config.{js,ts}",
-    "./app.vue",
-  ],
+  content: ['./components/**/*.{js,vue,ts}', './layouts/**/*.vue', './pages/**/*.vue', './plugins/**/*.{js,ts}', './nuxt.config.{js,ts}', './app.vue'],
   theme: {
-    extend: {},
+    extend: {}
   },
-  plugins: [],
-});
+  plugins: []
+})
 ```
 
 ## 安装图标库
@@ -144,10 +141,10 @@ icons 网址：https://icones.js.org/
 
 ```js
 // Add it to the modules array in your nuxt.config.ts:
-import { defineNuxtConfig } from "nuxt";
+import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
-  modules: ["nuxt-icon"],
-});
+  modules: ['nuxt-icon']
+})
 ```
 
 使用案例
@@ -174,8 +171,8 @@ export default defineNuxtConfig({
 ```ts
 // nuxt.config.ts
 export default defineNuxtConfig({
-  modules: ["@pinia/nuxt"],
-});
+  modules: ['@pinia/nuxt']
+})
 ```
 
 ## Pinia 状态持久化插件
@@ -189,33 +186,33 @@ https://nuxt.com.cn/modules/pinia-plugin-persistedstate
 ```ts
 // nuxt.config.ts
 export default defineNuxtConfig({
-  modules: ["@pinia-plugin-persistedstate/nuxt"],
-});
+  modules: ['@pinia-plugin-persistedstate/nuxt']
+})
 ```
 
 1. Add the plugin to pinia:
 
 ```js
-import { createPinia } from "pinia";
-import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
+import { createPinia } from 'pinia'
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
-const pinia = createPinia();
-pinia.use(piniaPluginPersistedstate);
+const pinia = createPinia()
+pinia.use(piniaPluginPersistedstate)
 ```
 
 2. Add the persist option to the store you want to be persisted:
 
 ```js
-import { defineStore } from "pinia";
+import { defineStore } from 'pinia'
 
-export const useStore = defineStore("store", {
+export const useStore = defineStore('store', {
   state: () => {
     return {
-      someState: "hello pinia",
-    };
+      someState: 'hello pinia'
+    }
   },
-  persist: true,
-});
+  persist: true
+})
 ```
 
 ## 安装 axios
