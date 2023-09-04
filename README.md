@@ -217,3 +217,7 @@ export const useStore = defineStore("store", {
   persist: true,
 });
 ```
+
+## 安装 axios
+
+`npm i axios`

@@ -1,10 +1,9 @@
 <template>
-  <div class="bg-red-500">
-    TESTING
-    <Icon name="uil:github" size="100" />
-  </div>
+  <MainLayout></MainLayout>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import MainLayout from "~/layouts/MainLayout.vue";
+</script>
 
 <style scoped></style>
