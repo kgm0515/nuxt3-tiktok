@@ -56,7 +56,7 @@
               <div class="mb-1 text-[15px]">Caption</div>
               <div class="text-gray-400 text-[12px]">{{ caption && caption.length ? caption.length : 0 }}/150</div>
             </div>
-            <input v-model="caption" maxlength="150" type="text" class="w-full border p-2.5 rounded-md focus:outline-none" />
+            <input v-model="caption" maxlength="150" type="text" placeholder="Please" class="w-full border p-2.5 rounded-md focus:outline-none" />
           </div>
           <div class="flex gap-3">
             <button class="px-10 py-2.5 mt-8 border text-[16px] hover:bg-gray-100 rounded-sm" @click="discard">Discard</button>
