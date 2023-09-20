@@ -6,4 +6,8 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  const isHover = (val: boolean) => {
+    return val
+  }
+</script>
